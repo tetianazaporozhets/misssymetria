@@ -60,13 +60,13 @@ body {
   margin: 0 auto;
 }
 
-.main__block {
-  /* background: url('../img/salon-img.jpg')  no-repeat;
-  background-size: 50%; */
-}
-
 .header {
   background: #8a8988;
+}
+@media screen and (max-width: 1444px) {
+  .header {
+    padding: 0px 40px 0px 40px;
+  }
 }
 .header__container {
   display: flex;
@@ -148,6 +148,11 @@ body {
   padding: 120px 0 120px 0;
   gap: 50px;
 }
+@media screen and (max-width: 1444px) {
+  .main__box {
+    padding: 120px 40px 120px 40px;
+  }
+}
 .main__box-info {
   display: flex;
   flex-direction: column;
@@ -179,6 +184,11 @@ body {
 .servises {
   background: #e8e8e8;
   padding: 90px 0 90px 0;
+}
+@media screen and (max-width: 1444px) {
+  .servises {
+    padding: 90px 40px 90px 40px;
+  }
 }
 
 .servises__subtitle {
@@ -233,6 +243,11 @@ body {
 .gallery {
   padding: 90px 0 90px 0;
 }
+@media screen and (max-width: 1444px) {
+  .gallery {
+    padding: 90px 40px 90px 40px;
+  }
+}
 .gallery__subtitle {
   margin: 0 0 70px 0;
 }
@@ -242,6 +257,12 @@ body {
 .gallery__img {
   height: 250px;
   width: 350px;
+}
+@media screen and (max-width: 1444px) {
+  .gallery__img {
+    height: 180px;
+    width: 245px;
+  }
 }
 
 .slick-dots {
@@ -254,7 +275,7 @@ body {
 }
 .slick-dots button {
   background: #6bbcec;
-  border: 1px solid #3e6b86;
+  border: none;
   border-radius: 50%;
   width: 12px;
   height: 12px;
@@ -262,9 +283,31 @@ body {
   line-height: 0;
 }
 
-.sertificate {
+.study {
   background: #EBF3F5;
+  padding: 90px 0 70px 0;
 }
+.study__subtitle {
+  margin: 0 0 50px 0;
+}
+.study__block-box {
+  margin: 0 0 40px 0;
+}
+.study__block-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #373a39, #6bbcec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.study__block-text {
+  margin: 0 0 15px 0;
+}
+
 .sertificate__block {
   background: url("../img/sertificate.jpg") no-repeat;
   background-size: 50%;
@@ -367,4 +410,15 @@ body {
   opacity: 50%;
   display: block;
   margin: 0 0 15px 0;
+}
+.footer__info {
+  background: #8a8988;
+}
+.footer__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
 }
