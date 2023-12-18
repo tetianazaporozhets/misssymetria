@@ -25,9 +25,10 @@ $(document).ready(function () {
       },
     ],
   });
+
   //nav btn
-  $(".nav__btn").click(function () {
-    $(".nav").toggleClass("active");
+  $(".header__btn").click(function () {
+    $(".header__nav").toggleClass("active");
   });
 
   $(".custom-arrows .prev-arrow").click(function () {
@@ -36,5 +37,35 @@ $(document).ready(function () {
 
   $(".custom-arrows .next-arrow").click(function () {
     $(".gallery__slider").slick("slickNext");
+  });
+
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $("html, body").animate(
+      {
+        scrollTop: $target.offset().top,
+      },
+      1000,
+      "swing"
+    );
+  });
+
+  $(".header__list-item a").click(function () {
+    $(".header__nav").removeClass("active");
+
+    var target = $(this).attr("href");
+
+    $("html, body").animate(
+      {
+        scrollTop: $(target).offset().top,
+      },
+      800
+    );
+
+    return false;
   });
 });

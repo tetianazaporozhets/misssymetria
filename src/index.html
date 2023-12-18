@@ -34,33 +34,40 @@
     <title>Title</title>
   </head>
   <body>
+    <div class="header-placeholder"></div>
     <header class="header">
       <div class="container header__container">
         <a href="" class="header__logo-link">
           <img src="img/logo.jpg" alt="" class="header__link-img" />
         </a>
         <nav class="header__nav">
+          <button type="button" class="header__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <ul class="header__list">
             <li class="header__list-item">
-              <a href="" class="header__list-link active-link">O nas</a>
+              <a href="#main" class="header__list-link">O nas</a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">Usługi</a>
+              <a href="#servises" class="header__list-link">Usługi</a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">Galeria</a>
+              <a href="#gallery" class="header__list-link">Galeria</a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">Szkolenie</a>
+              <a href="#study" class="header__list-link">Szkolenia</a>
             </li>
             <li class="header__list-item">
-              <a href="" class="header__list-link">Kontakt</a>
+              <a href="#contact" class="header__list-link">Kontakt</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="misssymetria">
+    <main id="main" class="main">
       <div class="main__block">
         <div class="main__container">
           <div class="main__box container">
@@ -90,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="servises">
+      <div id="servises" class="servises">
         <div class="container">
           <h2 class="servises__subtitle subtitle">Nasze usługi</h2>
           <div class="grid">
@@ -191,14 +198,24 @@
           </div>
         </div>
       </div>
-      <div class="gallery container">
+      <div id="gallery" class="gallery container">
         <h2 class="gallery__subtitle subtitle">Galeria</h2>
         <div class="gallery__slider">
           <div>
-            <img class="gallery__img" src="img/galery1.jpg" alt="" />
+            <img
+              class="gallery__img"
+              src="img/galery1.jpg"
+              data-img="img/galery1.jpg"
+              alt=""
+            />
           </div>
           <div>
-            <img class="gallery__img" src="img/galery2.jpg" alt="" />
+            <img
+              class="gallery__img"
+              src="img/galery2.jpg"
+              alt=""
+              data-img="img/galery2.jpg"
+            />
           </div>
           <div>
             <img class="gallery__img" src="img/galery3.jpg" alt="" />
@@ -236,9 +253,9 @@
           <button type="button" class="next-arrow"></button>
         </div>
       </div>
-      <div class="study">
+      <div id="study" class="study">
         <div class="container">
-          <h2 class="study__subtitle subtitle">Szkolenie</h2>
+          <h2 class="study__subtitle subtitle">Szkolenia</h2>
           <div class="study__block">
             <h4 class="study__block-subtitle">KURS STYLIZACJI PAZNOKCI</h4>
             <p class="study__block-text">
@@ -283,7 +300,7 @@
           </div>
         </div>
       </div>
-      <div class="sertificate">
+      <div id="sertificate" class="sertificate">
         <div class="sertificate__block">
           <div class="sertificate__box container">
             <div class="sertificate__img-box">
@@ -305,12 +322,14 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <div class="footer__block container">
         <div class="footer__info">
           <div class="footer__contacts">
             <div class="footer__contacts-box">
-              <h3 class="footer__contacts-subtitle">Skontaktuj się z nami</h3>
+              <div>
+                <h3 class="footer__contacts-subtitle">Skontaktuj się z nami</h3>
+              </div>
               <ul class="footer__list">
                 <li class="footer__list-item">
                   <a class="footer__list-link" href="tel:+48889701262"
@@ -368,7 +387,7 @@
             </div>
           </div>
           <div class="footer__time">
-            <h3 class="footer__contacts-subtitle">Godziny pracy</h3>
+            <div><h3 class="footer__contacts-subtitle">Godziny pracy</h3></div>
             <p class="footer__contacts-text">Pn - Pt:</p>
             <span class="">10:00 - 20:00</span>
             <p class="footer__contacts-text">Sb:</p>
