@@ -67,7 +67,7 @@ body {
   display: block;
 }
 .header__link-img {
-  width: 130px;
+  width: 123px;
   height: 74px;
 }
 .header__nav {
@@ -79,15 +79,6 @@ body {
 }
 @media screen and (max-width: 767px) {
   .header__nav.active .header__list {
-    /* position: absolute;
-    top: 100%;
-    right: 0;
-    display: block;
-    padding: 5px;
-    background: $header-color;
-    gap: 25px;
-    display: flex;
-    flex-direction: column; */
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -229,7 +220,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: center;
-  background: url(../img/misssymetria-biglogo.jpg) no-repeat;
+  background: url("../img/misssymetria-biglogo.svg") no-repeat;
   background-position: center;
 }
 .main__img {

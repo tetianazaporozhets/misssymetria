@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     $("html, body").animate(
       {
-        scrollTop: $target.offset().top,
+        scrollTop: $target.offset().top - 79,
       },
       1000,
       "swing"
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
     $("html, body").animate(
       {
-        scrollTop: $(target).offset().top,
+        scrollTop: $(target).offset().top - 79,
       },
       800
     );
