@@ -159,23 +159,6 @@ body {
   opacity: 70%;
 }
 
-.title {
-  background: linear-gradient(to right, #373a39, #6bbcec);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font: 500 40px/50px "Playfair Display";
-  font-size: 50px;
-  line-height: 55px;
-  letter-spacing: 2px;
-  margin: 0 0 40px 0;
-}
-@media screen and (max-width: 1023px) {
-  .title {
-    font-size: 34px;
-    line-height: 40px;
-  }
-}
-
 .subtitle {
   background: linear-gradient(to right, #373a39, #6bbcec);
   -webkit-background-clip: text;
@@ -196,32 +179,36 @@ body {
 
 .main__box {
   display: flex;
-  padding: 120px 0 120px 0;
-  gap: 50px;
+  padding: 100px 0 120px 0;
+  gap: 80px;
 }
 @media screen and (max-width: 1443px) {
   .main__box {
-    padding: 120px 40px 120px 40px;
+    padding: 100px 40px 100px 40px;
     gap: 80px;
   }
 }
 @media screen and (max-width: 1023px) {
   .main__box {
-    padding: 60px 40px 60px 40px;
+    padding: 70px 40px 70px 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .main__box {
-    flex-direction: column;
-    padding: 80px 40px 80px 40px;
+    flex-direction: column-reverse;
+    gap: 0;
   }
 }
 .main__box-info {
   display: flex;
   flex-direction: column;
-  align-self: center;
   background: url("../img/misssymetria-biglogo.svg") no-repeat;
   background-position: center;
+}
+@media screen and (max-width: 767px) {
+  .main__box-info {
+    margin: 0 0 40px 0;
+  }
 }
 .main__img {
   width: 500px;
@@ -233,66 +220,43 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .main__img {
-    width: 350px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 767px) {
   .main__img {
-    width: 320px;
+    width: 100%;
   }
 }
-.main__box-img {
-  position: relative;
-  align-self: center;
+.main__title {
+  background: linear-gradient(to right, #373a39, #6bbcec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font: 500 40px/50px "Playfair Display";
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: 2px;
+  margin: 0;
 }
-.main__box-img::before {
-  content: "";
-  position: absolute;
-  height: 590px;
-  width: 510px;
-  right: -69px;
-  top: -53px;
-  border: 8px solid #5c8692;
-  z-index: -1;
-}
-@media screen and (max-width: 1443px) {
-  .main__box-img::before {
-    content: "";
-    position: absolute;
-    height: 460px;
-    width: 398px;
-    right: 28px;
-    top: -35px;
-    border: 8px solid #5c8692;
-    z-index: -1;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .main__box-img::before {
-    content: "";
-    position: absolute;
-    height: 411px;
-    width: 352px;
-    right: 28px;
-    top: -35px;
-    border: 6px solid #5c8692;
-    z-index: -1;
-  }
-}
-@media screen and (max-width: 767px) {
-  .main__box-img::before {
-    content: "";
-    position: absolute;
-    height: 335px;
-    width: 274px;
-    right: -42px;
-    top: -35px;
-    border: 5px solid #5c8692;
-    z-index: -1;
+@media screen and (max-width: 1024px) {
+  .main__title {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 0 20px 0;
   }
 }
 .main__subtitle {
+  font: 500 40px/50px "Playfair Display";
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 1px;
   margin: 0 0 40px 0;
+}
+@media screen and (max-width: 1024px) {
+  .main__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 .main__text {
   margin: 0 0 20px 0;
@@ -300,16 +264,21 @@ body {
 
 .servises {
   background: #e8e8e8;
-  padding: 90px 0 90px 0;
+  padding: 120px 0 120px 0;
 }
 @media screen and (max-width: 1443px) {
   .servises {
-    padding: 90px 40px 90px 40px;
+    padding: 100px 40px 100px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .servises {
+    padding: 70px 40px 70px 40px;
   }
 }
 
 .servises__subtitle {
-  margin: 0 0 70px 0;
+  margin: 0 0 90px 0;
 }
 
 .grid {
@@ -317,6 +286,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 60px;
   grid-row-gap: 60px;
+}
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 767px) {
   .grid {
@@ -329,17 +303,18 @@ body {
   -webkit-box-shadow: 9px -9px 16px -13px rgb(138, 137, 136);
   -moz-box-shadow: 9px -9px 16px -13px rgb(138, 137, 136);
   box-shadow: 9px -9px 16px -13px rgb(138, 137, 136);
-  padding: 15px 15px 25px 15px;
+  padding: 10px 10px 25px 10px;
 }
 .grid__img {
   width: 100%;
   object-fit: cover;
   font-size: 0;
   margin: 0 0 20px 0;
+  height: 300px;
 }
 @media screen and (max-width: 767px) {
   .grid__img {
-    height: 280px;
+    height: 400px;
   }
 }
 .grid__subtitle-box {
@@ -367,15 +342,20 @@ body {
 }
 
 .gallery {
-  padding: 90px 0 90px 0;
+  padding: 120px 0 140px 0;
 }
 @media screen and (max-width: 1443px) {
   .gallery {
-    padding: 90px 40px 90px 40px;
+    padding: 100px 40px 120px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .gallery {
+    padding: 70px 40px 90px 40px;
   }
 }
 .gallery__subtitle {
-  margin: 0 0 70px 0;
+  margin: 0 0 90px 0;
 }
 .gallery__slider {
   margin: 0 auto;
@@ -443,15 +423,36 @@ body {
 
 .study {
   background: #ebf3f5;
-  padding: 90px 0 70px 0;
+  padding: 120px 0 120px 0;
 }
 @media screen and (max-width: 1443px) {
   .study {
-    padding: 90px 40px 70px 40px;
+    padding: 100px 40px 100px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .study {
+    padding: 70px 40px 70px 40px;
+  }
+}
+.study__box {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .study__box {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 .study__subtitle {
-  margin: 0 0 50px 0;
+  margin: 0 0 90px 0;
+}
+.study__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 .study__block-box {
   margin: 0 0 40px 0;
@@ -470,20 +471,52 @@ body {
 .study__block-text {
   margin: 0 0 15px 0;
 }
-
+@media screen and (max-width: 1024px) {
+  .study__img-box {
+    display: flex;
+    justify-content: end;
+  }
+}
+.study__img {
+  width: 500px;
+}
 @media screen and (max-width: 1443px) {
-  .sertificate__block {
-    padding: 0 40px 0 40px;
+  .study__img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .study__img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .study__img {
+    width: 100%;
+  }
+}
+
+.sertificate {
+  padding: 120px 0 120px 0;
+}
+@media screen and (max-width: 1443px) {
+  .sertificate {
+    padding: 100px 40px 100px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .sertificate {
+    padding: 70px 40px 70px 40px;
   }
 }
 .sertificate__box {
   display: flex;
-  gap: 30px;
-  padding: 80px 0 80px 0;
+  gap: 100px;
 }
 @media screen and (max-width: 1023px) {
   .sertificate__box {
     flex-direction: column-reverse;
+    gap: 0;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -496,7 +529,7 @@ body {
 .sertificate__subtitle {
   font: 500 40px/50px "Playfair Display";
   letter-spacing: 1px;
-  margin: 0 0 53px 0;
+  margin: 0 0 90px 0;
 }
 .sertificate__text {
   margin: 0;
@@ -519,12 +552,17 @@ body {
 .footer__block {
   display: flex;
   justify-content: space-between;
-  padding: 100px 0 100px 0;
+  padding: 120px 0 120px 0;
   gap: 30px;
 }
 @media screen and (max-width: 1443px) {
   .footer__block {
-    padding: 40px;
+    padding: 100px 40px 100px 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer__block {
+    padding: 70px 40px 70px 40px;
   }
 }
 @media screen and (max-width: 767px) {

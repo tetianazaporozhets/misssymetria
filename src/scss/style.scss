@@ -122,20 +122,7 @@ body {
   color: $accent-color;
   opacity: 70%;
 }
-.title {
-  background: linear-gradient(to right, #373a39, #6bbcec);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font: $playfairdisplay;
-  font-size: 50px;
-  line-height: 55px;
-  letter-spacing: 2px;
-  margin: 0 0 40px 0;
-  @media screen and (max-width: 1023px) {
-    font-size: 34px;
-    line-height: 40px;
-  }
-}
+
 .subtitle {
   background: linear-gradient(to right, #373a39, #6bbcec);
   -webkit-background-clip: text;
@@ -156,26 +143,28 @@ body {
 .main {
   &__box {
     display: flex;
-    padding: 120px 0 120px 0;
-    gap: 50px;
+    padding: 100px 0 120px 0;
+    gap: 80px;
     @media screen and (max-width: 1443px) {
-      padding: 120px 40px 120px 40px;
+      padding: 100px 40px 100px 40px;
       gap: 80px;
     }
     @media screen and (max-width: 1023px) {
-      padding: 60px 40px 60px 40px;
+      padding: 70px 40px 70px 40px;
     }
     @media screen and (max-width: 767px) {
-      flex-direction: column;
-      padding: 80px 40px 80px 40px;
+      flex-direction: column-reverse;
+      gap: 0;
     }
   }
   &__box-info {
     display: flex;
     flex-direction: column;
-    align-self: center;
     background: url("../img/misssymetria-biglogo.svg") no-repeat;
     background-position: center;
+    @media screen and (max-width: 767px) {
+      margin: 0 0 40px 0;
+    }
   }
   &__img {
     width: 500px;
@@ -183,65 +172,37 @@ body {
       width: 400px;
     }
     @media screen and (max-width: 1023px) {
-      width: 350px;
+      width: 300px;
     }
     @media screen and (max-width: 767px) {
-      width: 320px;
+      width: 100%;
     }
   }
-  &__box-img {
-    position: relative;
-    align-self: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 590px;
-      width: 510px;
-      right: -69px;
-      top: -53px;
-      border: 8px solid #5c8692;
-      z-index: -1;
-    }
-    @media screen and (max-width: 1443px) {
-      &::before {
-        content: "";
-        position: absolute;
-        height: 460px;
-        width: 398px;
-        right: 28px;
-        top: -35px;
-        border: 8px solid #5c8692;
-        z-index: -1;
-      }
-    }
-    @media screen and (max-width: 1023px) {
-      &::before {
-        content: "";
-        position: absolute;
-        height: 411px;
-        width: 352px;
-        right: 28px;
-        top: -35px;
-        border: 6px solid #5c8692;
-        z-index: -1;
-      }
-    }
-    @media screen and (max-width: 767px) {
-      &::before {
-        content: "";
-        position: absolute;
-        height: 335px;
-        width: 274px;
-        right: -42px;
-        top: -35px;
-        border: 5px solid #5c8692;
-        z-index: -1;
-      }
+  &__title {
+    background: linear-gradient(to right, #373a39, #6bbcec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: $playfairdisplay;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: 2px;
+    margin: 0;
+    @media screen and (max-width: 1024px) {
+      font-size: 34px;
+      line-height: 40px;
+      margin: 0 0 20px 0;
     }
   }
   &__subtitle {
+    font: $playfairdisplay;
+    font-size: 30px;
+    line-height: 55px;
+    letter-spacing: 1px;
     margin: 0 0 40px 0;
+    @media screen and (max-width: 1024px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
   &__text {
     margin: 0 0 20px 0;
@@ -249,19 +210,25 @@ body {
 }
 .servises {
   background: $bg-color-gray;
-  padding: 90px 0 90px 0;
+  padding: 120px 0 120px 0;
   @media screen and (max-width: 1443px) {
-    padding: 90px 40px 90px 40px;
+    padding: 100px 40px 100px 40px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 70px 40px 70px 40px;
   }
 }
 .servises__subtitle {
-  margin: 0 0 70px 0;
+  margin: 0 0 90px 0;
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 60px;
   grid-row-gap: 60px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
   }
@@ -271,15 +238,16 @@ body {
     -webkit-box-shadow: 9px -9px 16px -13px rgba(138, 137, 136, 1);
     -moz-box-shadow: 9px -9px 16px -13px rgba(138, 137, 136, 1);
     box-shadow: 9px -9px 16px -13px rgba(138, 137, 136, 1);
-    padding: 15px 15px 25px 15px;
+    padding: 10px 10px 25px 10px;
   }
   &__img {
     width: 100%;
     object-fit: cover;
     font-size: 0;
     margin: 0 0 20px 0;
+    height: 300px;
     @media screen and (max-width: 767px) {
-      height: 280px;
+      height: 400px;
     }
   }
   &__subtitle-box {
@@ -307,12 +275,15 @@ body {
   }
 }
 .gallery {
-  padding: 90px 0 90px 0;
+  padding: 120px 0 140px 0;
   @media screen and (max-width: 1443px) {
-    padding: 90px 40px 90px 40px;
+    padding: 100px 40px 120px 40px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 70px 40px 90px 40px;
   }
   &__subtitle {
-    margin: 0 0 70px 0;
+    margin: 0 0 90px 0;
   }
   &__slider {
     margin: 0 auto;
@@ -372,13 +343,30 @@ body {
 }
 .study {
   background: $bg-color-blue;
-  padding: 90px 0 70px 0;
-  @media screen and (max-width: 1443px) {
-    padding: 90px 40px 70px 40px;
-  }
+  padding: 120px 0 120px 0;
 
+  @media screen and (max-width: 1443px) {
+    padding: 100px 40px 100px 40px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 70px 40px 70px 40px;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
   &__subtitle {
-    margin: 0 0 50px 0;
+    margin: 0 0 90px 0;
+  }
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
   }
   &__block-box {
     margin: 0 0 40px 0;
@@ -397,20 +385,42 @@ body {
   &__block-text {
     margin: 0 0 15px 0;
   }
+  &__img-box {
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      justify-content: end;
+    }
+  }
+  &__img {
+    width: 500px;
+
+    @media screen and (max-width: 1443px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 1023px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
 }
 
 .sertificate {
-  &__block {
-    @media screen and (max-width: 1443px) {
-      padding: 0 40px 0 40px;
-    }
+  padding: 120px 0 120px 0;
+  @media screen and (max-width: 1443px) {
+    padding: 100px 40px 100px 40px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 70px 40px 70px 40px;
   }
   &__box {
     display: flex;
-    gap: 30px;
-    padding: 80px 0 80px 0;
+    gap: 100px;
+
     @media screen and (max-width: 1023px) {
       flex-direction: column-reverse;
+      gap: 0;
     }
   }
   &__info {
@@ -424,7 +434,7 @@ body {
     font: $playfairdisplay;
 
     letter-spacing: 1px;
-    margin: 0 0 53px 0;
+    margin: 0 0 90px 0;
   }
   &__text {
     margin: 0;
@@ -443,13 +453,14 @@ body {
   background: $bg-color-gray;
   &__block {
     display: flex;
-
     justify-content: space-between;
-    padding: 100px 0 100px 0;
-
+    padding: 120px 0 120px 0;
     gap: 30px;
     @media screen and (max-width: 1443px) {
-      padding: 40px;
+      padding: 100px 40px 100px 40px;
+    }
+    @media screen and (max-width: 1023px) {
+      padding: 70px 40px 70px 40px;
     }
     @media screen and (max-width: 767px) {
       flex-direction: column;
@@ -551,7 +562,6 @@ body {
   &__dev {
     background: #8a8988;
   }
-
   &__text {
     margin: 0;
     font-size: 13px;
