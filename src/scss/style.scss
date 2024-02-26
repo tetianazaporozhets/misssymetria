@@ -147,10 +147,11 @@ body {
     gap: 80px;
     @media screen and (max-width: 1443px) {
       padding: 100px 40px 100px 40px;
-      gap: 80px;
+      gap: 70px;
     }
     @media screen and (max-width: 1023px) {
       padding: 70px 40px 70px 40px;
+      gap: 50px;
     }
     @media screen and (max-width: 767px) {
       flex-direction: column-reverse;
@@ -162,6 +163,7 @@ body {
     flex-direction: column;
     background: url("../img/misssymetria-biglogo.svg") no-repeat;
     background-position: center;
+    align-self: center;
     @media screen and (max-width: 767px) {
       margin: 0 0 40px 0;
     }
@@ -202,6 +204,7 @@ body {
     @media screen and (max-width: 1024px) {
       font-size: 22px;
       line-height: 26px;
+      margin: 0 0 30px 0;
     }
   }
   &__text {
@@ -220,6 +223,9 @@ body {
 }
 .servises__subtitle {
   margin: 0 0 90px 0;
+  @media screen and (max-width: 1443px) {
+    margin: 0 0 80px 0;
+  }
 }
 .grid {
   display: grid;
@@ -252,8 +258,8 @@ body {
   }
   &__subtitle-box {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 1px;
     margin: 0 0 10px 0;
     text-transform: uppercase;
@@ -284,6 +290,9 @@ body {
   }
   &__subtitle {
     margin: 0 0 90px 0;
+    @media screen and (max-width: 1443px) {
+      margin: 0 0 80px 0;
+    }
   }
   &__slider {
     margin: 0 auto;
@@ -344,7 +353,6 @@ body {
 .study {
   background: $bg-color-blue;
   padding: 120px 0 120px 0;
-
   @media screen and (max-width: 1443px) {
     padding: 100px 40px 100px 40px;
   }
@@ -362,25 +370,36 @@ body {
   }
   &__subtitle {
     margin: 0 0 90px 0;
+    @media screen and (max-width: 1443px) {
+      margin: 0 0 80px 0;
+    }
   }
   &__blocks {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 20px;
   }
   &__block-box {
     margin: 0 0 40px 0;
   }
-  &__block-subtitle {
+  &__block-title {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 1px;
     margin: 0 0 15px 0;
     text-transform: uppercase;
     background: linear-gradient(to right, #373a39, #6bbcec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  &__block-subtitle {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
   }
   &__block-text {
     margin: 0 0 15px 0;
@@ -416,8 +435,7 @@ body {
   }
   &__box {
     display: flex;
-    gap: 100px;
-
+    gap: 80px;
     @media screen and (max-width: 1023px) {
       flex-direction: column-reverse;
       gap: 0;
@@ -432,9 +450,11 @@ body {
   }
   &__subtitle {
     font: $playfairdisplay;
-
     letter-spacing: 1px;
     margin: 0 0 90px 0;
+    @media screen and (max-width: 1443px) {
+      margin: 0 0 80px 0;
+    }
   }
   &__text {
     margin: 0;
@@ -443,8 +463,14 @@ body {
     align-self: center;
   }
   &__img {
-    width: 550px;
+    width: 500px;
     @media screen and (max-width: 1023px) {
+      width: 450px;
+    }
+    @media screen and (max-width: 1023px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 767px) {
       width: 100%;
     }
   }

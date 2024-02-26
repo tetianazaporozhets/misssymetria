@@ -185,12 +185,13 @@ body {
 @media screen and (max-width: 1443px) {
   .main__box {
     padding: 100px 40px 100px 40px;
-    gap: 80px;
+    gap: 70px;
   }
 }
 @media screen and (max-width: 1023px) {
   .main__box {
     padding: 70px 40px 70px 40px;
+    gap: 50px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -204,6 +205,7 @@ body {
   flex-direction: column;
   background: url("../img/misssymetria-biglogo.svg") no-repeat;
   background-position: center;
+  align-self: center;
 }
 @media screen and (max-width: 767px) {
   .main__box-info {
@@ -256,6 +258,7 @@ body {
   .main__subtitle {
     font-size: 22px;
     line-height: 26px;
+    margin: 0 0 30px 0;
   }
 }
 .main__text {
@@ -279,6 +282,11 @@ body {
 
 .servises__subtitle {
   margin: 0 0 90px 0;
+}
+@media screen and (max-width: 1443px) {
+  .servises__subtitle {
+    margin: 0 0 80px 0;
+  }
 }
 
 .grid {
@@ -319,8 +327,8 @@ body {
 }
 .grid__subtitle-box {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 1px;
   margin: 0 0 10px 0;
   text-transform: uppercase;
@@ -356,6 +364,11 @@ body {
 }
 .gallery__subtitle {
   margin: 0 0 90px 0;
+}
+@media screen and (max-width: 1443px) {
+  .gallery__subtitle {
+    margin: 0 0 80px 0;
+  }
 }
 .gallery__slider {
   margin: 0 auto;
@@ -449,24 +462,37 @@ body {
 .study__subtitle {
   margin: 0 0 90px 0;
 }
+@media screen and (max-width: 1443px) {
+  .study__subtitle {
+    margin: 0 0 80px 0;
+  }
+}
 .study__blocks {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 20px;
 }
 .study__block-box {
   margin: 0 0 40px 0;
 }
-.study__block-subtitle {
+.study__block-title {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 1px;
   margin: 0 0 15px 0;
   text-transform: uppercase;
   background: linear-gradient(to right, #373a39, #6bbcec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.study__block-subtitle {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
 }
 .study__block-text {
   margin: 0 0 15px 0;
@@ -511,7 +537,7 @@ body {
 }
 .sertificate__box {
   display: flex;
-  gap: 100px;
+  gap: 80px;
 }
 @media screen and (max-width: 1023px) {
   .sertificate__box {
@@ -531,6 +557,11 @@ body {
   letter-spacing: 1px;
   margin: 0 0 90px 0;
 }
+@media screen and (max-width: 1443px) {
+  .sertificate__subtitle {
+    margin: 0 0 80px 0;
+  }
+}
 .sertificate__text {
   margin: 0;
 }
@@ -538,9 +569,19 @@ body {
   align-self: center;
 }
 .sertificate__img {
-  width: 550px;
+  width: 500px;
 }
 @media screen and (max-width: 1023px) {
+  .sertificate__img {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .sertificate__img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
   .sertificate__img {
     width: 100%;
   }
